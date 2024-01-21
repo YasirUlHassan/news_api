@@ -5,25 +5,25 @@ import News from "./News";
 export default function Home() {
     const [category, setCategory] = useState("india");
     const [articles, setArticles] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     const current = new Date();
     const month = (current.getMonth() + 1).toString().padStart(2, '0');
     const date = `${current.getFullYear()}-${month}-${current.getDate() - 1}`;
 
     useEffect(() => {
-        setLoading(true);
+        // setLoading(true);
 
         fetch(`https://newsapi.org/v2/everything?q=${category}&from=${date}&language=en&sortBy=publishedAt&apiKey=f6c1649e74304d65a3a369a7bba759bf`)
             .then((response) => response.json())
             .then((news) => {
                 setArticles(news.articles);
-                setLoading(false);
+                // setLoading(false);
             })
             .catch((err) => {
-                setError(err);
-                setLoading(false);
+                // setError(err);
+                // setLoading(false);
             });
     }, [category]);
     return (
