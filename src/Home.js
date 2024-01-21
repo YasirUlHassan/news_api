@@ -42,13 +42,16 @@ export default function Home() {
                     </form>
                 </div>
             </header>
-
-            <section className="news">
-                {/* <div className="loading-error">
+            <div className="news-articles">
+                            {articles.map((article) => (
+                                <News key={article.url} article={article} />
+                            ))}</div>
+            {/* <section className="news">
+                <div className="loading-error">
                     {loading && <p>Loading...</p>}
                     {error && <p>Error: {error.message}</p>}
                 </div>
-                {!loading && !error && articles.length === 0 && <h3>No News Found</h3>} */}
+                {!loading && !error && articles.length === 0 && <h3>No News Found</h3>}
                 {!loading && !error && articles.length > 0 && (
                     <>
                         <section className="heading">
@@ -61,7 +64,7 @@ export default function Home() {
                         </div>
                     </>
                 )}
-            </section>
+            </section> */}
         </div>
     )
 }
