@@ -31,12 +31,15 @@ export default function Home() {
             <header className="header">
                 <h1>DailySortFeed</h1>
                 <div className='header-right'>
-                    <input
-                        className='searchbox' type="text" onChange={(event) => {
-                            const value = event.target.value.trim();
-                            setCategory(value === "" ? "india" : value);
-                        }}
-                        placeholder="Search News" />
+                    <form>
+                        <input type="text" id="search" name="search"
+                            className='searchbox' onChange={(event) => {
+                                const value = event.target.value.trim();
+                                setCategory(value === "" ? "india" : value);
+                            }}
+                            placeholder="Search News"
+                        />
+                    </form>
                 </div>
             </header>
 
