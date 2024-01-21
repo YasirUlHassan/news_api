@@ -44,11 +44,11 @@ export default function Home() {
             </header>
 
             <section className="news">
-                <div className="loading-error">
+                {/* <div className="loading-error">
                     {loading && <p>Loading...</p>}
                     {error && <p>Error: {error.message}</p>}
                 </div>
-                {!loading && !error && articles.length === 0 && <h3>No News Found</h3>}
+                {!loading && !error && articles.length === 0 && <h3>No News Found</h3>} */}
                 {!loading && !error && articles.length > 0 && (
                     <>
                         <section className="heading">
