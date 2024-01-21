@@ -6,7 +6,7 @@ export default function News(props) {
             <div className="news-img">
                 {
                     props.article.urlToImage !== null ?
-                        <img src={props.article.urlToImage} alt=""></img> :
+                        <img src={props.article.urlToImage} alt="FallBackImage"></img> :
                         <img src="https://s3.amazonaws.com/images.ecwid.com/images/12043022/3118240932.jpg" alt=""></img>
                 }
             </div>
@@ -15,7 +15,7 @@ export default function News(props) {
                 <h1>{props.article.title}</h1>
 
                 <div className="desc-auth">
-                    <p>{props.article.description?.substring(0, 200).concat("...  ")}<a href={props.article.url} target="_blank" rel="noreferrer">Read more</a></p>
+                    <p>{props.article.description?.substring(0, 200).concat("...  ")}<a href={props.article.url} target="_blank" rel="noopener noreferrer">Read more</a></p>
                     <div className="source">
                         <div className="source-1">
                             <p>Author : </p>
