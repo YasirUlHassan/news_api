@@ -39,7 +39,7 @@ export default function Home() {
                                     const value = event.target.value.trim();
                                     setCategory(value === "" ? "india" : value);
                                 }}
-                                placeholder="Search News"
+                                placeholder=""
                             />
                         </form>
                     </div>
