@@ -84,6 +84,11 @@ body {
     flex-grow: 1;
 }
 
+.header-right input::placeholder{
+    color: black;
+    opacity: 1;
+}
+
 
 .loading-error p {
     font-size: 20px;
@@ -231,14 +236,15 @@ body {
 
 @media screen and (max-width: 380px) {
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 2.3rem;
     }
-    .header-right form label {
-        display: none;
+    form{
+        font-size: 0.7rem;
     }
+    
     .searchbox {
         padding: 5px;
-        font-size: 0.8rem;
+        /* font-size: 0.8rem; */
     }
 
     .source {
