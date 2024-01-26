@@ -4,8 +4,10 @@ import Home from './Home';
 function App() {
   return (
     <div className="App">
-      <Home></Home>
-      </div>
+      <section className="heading">
+        <h1>Latest articles about India</h1>
+      </section>
+    </div>
   );
 }
 
