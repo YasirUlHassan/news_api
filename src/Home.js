@@ -1,4 +1,4 @@
-// /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import News from "./News";
 
@@ -58,8 +58,8 @@ export default function Home() {
                             <h1>Latest articles about India</h1>
                         </section>
                         <div className="news-articles">
-                            {articles.map((article) => (
-                                <News key={article.url} article={article} />
+                            {articles.map((article,index ) => (
+                                <News key={index} article={article} />
                             ))}
                         </div>
                     </>

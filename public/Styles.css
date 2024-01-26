@@ -107,6 +107,7 @@ body {
 .heading {
     width: 100%;
     padding: 30px 5% 0px 5%;
+    font-size: 30px;
     background-color: #f2f2f2;
 }
 
