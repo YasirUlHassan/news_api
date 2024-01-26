@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+// /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import News from "./News";
 
@@ -25,7 +25,7 @@ export default function Home() {
                 setError(err);
                 setLoading(false);
             });
-    }, [category]);
+    }, [category,date]);
     return (
         <div className="container">
             <header className="header">
@@ -36,7 +36,7 @@ export default function Home() {
                             <label>Search</label>
                             <input type="text" id="search" name="search" className='searchbox'
                                 onChange={(event) => {
-                                    const value = event.target.value.trim();
+                                    const value = event.target.value;
                                     setCategory(value === "" ? "india" : value);
                                 }}
                                 placeholder=""
